@@ -7,16 +7,25 @@ modals.forEach(modal => {
         e.stopPropagation();
     })
 
-    modal.addEventListener('click', e => {
-        modal.style.display = 'none';
-    })
-    const close = modal.querySelector('.modal__close');
-    close.addEventListener('click', e => {
-        modal.style.display = 'none';
-    })
+    if(modal.hasAttribute('modal-close')){
+        modal.addEventListener('click', e => {
+            modal.style.display = 'none';
+        });
+    }
+
+    const closables = Array.from(modal.querySelectorAll('[modal-close]'));
+    closables.forEach(closable => {
+        closable.addEventListener('click', e => {
+            modal.style.display = 'none';
+        });
+    });
 });
 
-const showModal = document.getElementById('showModal');
-showModal.addEventListener('click', e => {
-    modals[0].style.display = 'flex';
+const triggers = Array.from(document.querySelectorAll('[modal-trigger]'));
+triggers.forEach(trigger => {
+    trigger.addEventListener('click', e => {
+        const modalId = trigger.getAttribute('modal-trigger');
+        const modal = modals.filter(modal => modal.id === modalId)[0];
+        modal.style.display = 'flex';
+    });
 });
