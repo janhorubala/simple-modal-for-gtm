@@ -38,3 +38,26 @@ document.addEventListener('keydown', e => {
 			})
 	}
 });
+
+function showModal(template){
+    document.body.innerHTML += template;
+    const modal = document.body.lastChild;
+	const popup = modal.querySelector('.modal__popup');
+
+	popup.addEventListener('click', e => {
+		e.stopPropagation();
+	})
+
+	if (modal.hasAttribute('modal-close')) {
+		modal.addEventListener('click', e => {
+			modal.style.display = 'none';
+		});
+	}
+
+	const closables = Array.from(modal.querySelectorAll('[modal-close]'));
+	closables.forEach(closable => {
+		closable.addEventListener('click', e => {
+			modal.style.display = 'none';
+		});
+    });
+}
