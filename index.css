@@ -1,3 +1,8 @@
+*, *:before, *:after {
+    box-sizing: border-box ;
+}
+
+
 .modal {
     position: absolute;
     left: 0;
@@ -13,7 +18,8 @@
 }
 
 .modal__popup {
-    width: 75%;
+    width: auto;
+    max-width: 90%;
     height: 70%;    
     background: white;
     border-radius: 5px;
@@ -23,16 +29,19 @@
 }
 
 .modal__image {
-    width: 50%;
+    max-width: 55%;
+    height: 100%;
 }
 
 .modal__content {
-    width: 50%;
+    width: 45%;
     padding: 40px 20px;
     font-size: 1.2em;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    overflow: hidden scroll;
+    word-wrap: break-word;
 }
 
 .modal__close {
@@ -71,4 +80,39 @@
 
     cursor: pointer;
     align-self: flex-start;
+}
+
+@media (max-width: 425px) {
+    .modal__close {
+        position: fixed;
+        color: white;
+    }
+
+    .modal__popup {
+        width: 90%;
+        height: 80%;
+        word-wrap: break-word;
+
+        flex-direction: column;
+        overflow-y: auto;
+    }
+
+    .modal__header {
+        font-size: 1.2em;
+        text-align: center;
+    }
+
+    .modal__image {
+        max-width: unset;
+        width: 100%;
+        max-height: 30%;
+    }
+
+    .modal__content {
+        width: 100%;
+    }
+
+    .modal__paragraphs {
+        width: 100%;
+    }
 }
