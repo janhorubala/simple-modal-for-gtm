@@ -40,7 +40,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    overflow: hidden scroll;
+    overflow: hidden auto;
     word-wrap: break-word;
 }
 
@@ -62,10 +62,12 @@
     font-size: 1.5em;
     font-weight: bold;
     text-transform: uppercase;
+    font-family: 'Geogrotesque', sans-serif;
 }
 
 .modal__paragraphs {
     width: 70%;
+    font-family: 'Tahoma', sans-serif;
 }
 
 .modal__button {
@@ -80,6 +82,7 @@
 
     cursor: pointer;
     align-self: flex-start;
+    font-family: 'Geogrotesque', sans-serif;
 }
 
 @media (max-width: 425px) {
