@@ -1,4 +1,9 @@
-.modal {
+#gtsmModal *, *:before, *:after{
+    box-sizing: border-box;
+}
+
+#gtsmModal.modal {
+    box-sizing: border-box;
     position: absolute;
     left: 0;
     top: 0;
@@ -12,10 +17,10 @@
     align-items: center;
 }
 
-.modal__popup{
-    width: 600px;
-    height: 400x;
-
+#gtsmModal .modal__popup {
+    width: auto;
+    max-width: 90%;
+    height: 70%;    
     background: white;
     border-radius: 5px;
     position: relative;
@@ -23,18 +28,94 @@
     overflow: hidden;
 }
 
-.modal__close{
+#gtsmModa .modal__image {
+    max-width: 55%;
+    height: 100%;
+}
+
+#gtsmModal .modal__content {
+    width: 45%;
+    padding: 40px 20px;
+    font-size: 1.2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden auto;
+    word-wrap: break-word;
+}
+
+#gtsmModal .modal__close {
     position: absolute;
-    top: 5px;
-    right: 5px;
     cursor: pointer;
+    top: 10px;
+    right: 15px;
+    font-size: 30px;
+    display: block;
 }
 
-.modal__image {
-    width: 50%;
+#gtsmModal .modal__close:hover {
+    color: gray;
 }
 
-.modal__content{
-    width: 50%;
-    padding: 30px 10px;
+#gtsmModal .modal__header {
+    margin-top: 10px;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Geogrotesque', sans-serif;
+}
+
+#gtsmModal .modal__paragraphs {
+    width: 70%;
+    font-family: 'Tahoma', sans-serif;
+}
+
+#gtsmModal .modal__button {
+    padding: 16px 25px;
+    border: 3px solid rgb(240,0,140);
+    border-radius: 25px;
+    outline: none;
+    background: none;
+
+    font-weight: bold;
+    text-transform: uppercase;
+
+    cursor: pointer;
+    align-self: flex-start;
+    font-family: 'Geogrotesque', sans-serif;
+}
+
+@media (max-width: 425px) {
+    #gtsmModal .modal__close {
+        position: fixed;
+        color: white;
+    }
+
+    #gtsmModal .modal__popup {
+        width: 90%;
+        height: 80%;
+        word-wrap: break-word;
+
+        flex-direction: column;
+        overflow-y: auto;
+    }
+
+    #gtsmModal .modal__header {
+        font-size: 1.2em;
+        text-align: center;
+    }
+
+    #gtsmModal .modal__image {
+        max-width: unset;
+        width: 100%;
+        max-height: 30%;
+    }
+
+    #gtsmModal .modal__content {
+        width: 100%;
+    }
+
+    #gtsmModal .modal__paragraphs {
+        width: 100%;
+    }
 }
