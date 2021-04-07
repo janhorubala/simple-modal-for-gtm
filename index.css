@@ -1,9 +1,9 @@
-*, *:before, *:after {
-    box-sizing: border-box ;
+#gtsmModal *, *:before, *:after{
+    box-sizing: border-box;
 }
 
-
 #gtsmModal.modal {
+    box-sizing: border-box;
     position: absolute;
     left: 0;
     top: 0;
