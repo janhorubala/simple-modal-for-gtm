@@ -3,7 +3,7 @@
 }
 
 
-.modal {
+#gtsmModal.modal {
     position: absolute;
     left: 0;
     top: 0;
@@ -17,7 +17,7 @@
     align-items: center;
 }
 
-.modal__popup {
+#gtsmModal .modal__popup {
     width: auto;
     max-width: 90%;
     height: 70%;    
@@ -28,12 +28,12 @@
     overflow: hidden;
 }
 
-.modal__image {
+#gtsmModa .modal__image {
     max-width: 55%;
     height: 100%;
 }
 
-.modal__content {
+#gtsmModal .modal__content {
     width: 45%;
     padding: 40px 20px;
     font-size: 1.2em;
@@ -44,7 +44,7 @@
     word-wrap: break-word;
 }
 
-.modal__close {
+#gtsmModal .modal__close {
     position: absolute;
     cursor: pointer;
     top: 10px;
@@ -53,11 +53,11 @@
     display: block;
 }
 
-.modal__close:hover {
+#gtsmModal .modal__close:hover {
     color: gray;
 }
 
-.modal__header {
+#gtsmModal .modal__header {
     margin-top: 10px;
     font-size: 1.5em;
     font-weight: bold;
@@ -65,12 +65,12 @@
     font-family: 'Geogrotesque', sans-serif;
 }
 
-.modal__paragraphs {
+#gtsmModal .modal__paragraphs {
     width: 70%;
     font-family: 'Tahoma', sans-serif;
 }
 
-.modal__button {
+#gtsmModal .modal__button {
     padding: 16px 25px;
     border: 3px solid rgb(240,0,140);
     border-radius: 25px;
@@ -86,12 +86,12 @@
 }
 
 @media (max-width: 425px) {
-    .modal__close {
+    #gtsmModal .modal__close {
         position: fixed;
         color: white;
     }
 
-    .modal__popup {
+    #gtsmModal .modal__popup {
         width: 90%;
         height: 80%;
         word-wrap: break-word;
@@ -100,22 +100,22 @@
         overflow-y: auto;
     }
 
-    .modal__header {
+    #gtsmModal .modal__header {
         font-size: 1.2em;
         text-align: center;
     }
 
-    .modal__image {
+    #gtsmModal .modal__image {
         max-width: unset;
         width: 100%;
         max-height: 30%;
     }
 
-    .modal__content {
+    #gtsmModal .modal__content {
         width: 100%;
     }
 
-    .modal__paragraphs {
+    #gtsmModal .modal__paragraphs {
         width: 100%;
     }
 }
