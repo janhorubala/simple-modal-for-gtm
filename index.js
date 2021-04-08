@@ -39,9 +39,9 @@ document.addEventListener('keydown', e => {
 	}
 });
 
-function showModal(template){
-    document.body.innerHTML += template;
-    const modal = document.body.lastChild;
+function showModal(template) {
+	document.body.innerHTML += template;
+	const modal = document.body.lastChild;
 	const popup = modal.querySelector('.modal__popup');
 
 	popup.addEventListener('click', e => {
@@ -59,12 +59,12 @@ function showModal(template){
 		closable.addEventListener('click', e => {
 			modal.style.display = 'none';
 		});
-    });
+	});
 }
 
 const head = document.getElementsByTagName('head')[0];
 const link = document.createElement('link');
 link.rel = 'stylesheet';
 link.type = 'text/css';
-link.href = 'index.css';
+link.href = 'https://janhorubala.github.io/simple-modal-for-gtm/index.css';
 head.appendChild(link);
