@@ -1,6 +1,7 @@
 const modals = Array.from(document.querySelectorAll('.modal'));
 modals.forEach(modal => {
 	modal.style.display = 'none';
+	document.body.style.overflow = ''
 	const popup = modal.querySelector('.modal__popup');
 
 	popup.addEventListener('click', e => {
@@ -10,6 +11,7 @@ modals.forEach(modal => {
 	if (modal.hasAttribute('modal-close')) {
 		modal.addEventListener('click', e => {
 			modal.style.display = 'none';
+			document.body.style.overflow = ''
 		});
 	}
 
@@ -17,6 +19,7 @@ modals.forEach(modal => {
 	closables.forEach(closable => {
 		closable.addEventListener('click', e => {
 			modal.style.display = 'none';
+			document.body.style.overflow = ''
 		});
 	});
 });
@@ -35,11 +38,13 @@ document.addEventListener('keydown', e => {
 		modals.filter(modal => modal.hasAttribute('modal-close'))
 			.forEach(modal => {
 				modal.style.display = 'none';
+				document.body.style.overflow = ''
 			})
 	}
 });
 
 function showModal(template) {
+	document.body.style.overflow = 'hidden';
 	document.body.innerHTML += template;
 	const modal = document.body.lastChild;
 	const popup = modal.querySelector('.modal__popup');
@@ -51,6 +56,7 @@ function showModal(template) {
 	if (modal.hasAttribute('modal-close')) {
 		modal.addEventListener('click', e => {
 			modal.style.display = 'none';
+			document.body.style.overflow = ''
 		});
 	}
 
@@ -58,6 +64,7 @@ function showModal(template) {
 	closables.forEach(closable => {
 		closable.addEventListener('click', e => {
 			modal.style.display = 'none';
+			document.body.style.overflow = ''
 		});
 	});
 }
