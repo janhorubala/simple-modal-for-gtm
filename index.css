@@ -3,6 +3,7 @@
 }
 
 #gtmsm.modal__wrapper {
+    z-index: 100000;
     position: absolute;
     left: 0;
     top: 0;
@@ -12,7 +13,7 @@
     align-items: center;
     justify-content: center;
     background: rgba(0,0,0,0.6);
-    font-family: Geogrotesque, tahoma, verdana, arial, sans-serif;
+    font-family: "Geogrotesque Medium", tahoma, verdana, arial, sans-serif;
 }
 
 #gtmsm .modal__close {
@@ -52,11 +53,12 @@
 #gtmsm .modal__button {
     padding: 15px 25px;
     border: 3px solid rgb(240,0,140);
-    border-radius: 25px;
+    border-radius: 50px;
     outline: none;
     background: none;
     font-weight: bold;
     cursor: pointer;
+    color: black;
 }
 
 @media (max-width: 768px) {
